@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Battery Engineer Portfolio</title>
+    <title>Yi Li - A Battery Engineer & Data Scientist</title>
     
     <!-- 1. Tailwind CSS (The Styling Engine) -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -32,7 +32,7 @@
                     <div id="logo-bg" class="p-2 rounded-lg bg-emerald-500/20 text-emerald-400">
                         <i data-lucide="zap" class="w-5 h-5"></i>
                     </div>
-                    <span class="font-bold text-xl tracking-tight">Engineer.Io</span>
+                    <span class="font-bold text-xl tracking-tight">Yili Li</span>
                 </div>
                 
                 <!-- Desktop Menu -->
@@ -74,58 +74,26 @@
 
     <!-- Hero Section -->
     <section id="about" class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
-        <div class="flex flex-col md:flex-row items-start md:items-center gap-12">
-            <div class="flex-1 space-y-6">
-                <div id="badge" class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-sm font-medium bg-emerald-500/10 text-emerald-400">
-                    <i data-lucide="battery-charging" class="w-4 h-4"></i>
-                    <span>Battery Engineering + Data Science</span>
-                </div>
+        <div class="flex flex-col md:flex-row items-center gap-12">
+            <!-- Profile Picture -->
+            <div class="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden flex-shrink-0">
+                <img src="https://via.placeholder.com/256" alt="Yili Li" class="w-full h-full object-cover">
+            </div>
+
+            <div class="flex-1 space-y-6 text-center md:text-left">
                 <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight leading-tight">
-                    Bridging the gap between <span class="text-emerald-500">electrochemistry</span> and <span class="text-blue-500">machine learning</span>.
+                    Hi, I'm Yili Li
                 </h1>
                 <p id="hero-text" class="text-lg md:text-xl max-w-2xl text-slate-400">
-                    I analyze complex battery datasets to predict lifecycle, optimize performance, and uncover industry trends. My goal is to make energy storage smarter.
+                    I'm a Battery Engineer with a passion for Data Science. I love to explore the intersection of electrochemistry and machine learning to build smarter energy storage solutions.
                 </p>
-                <div class="flex gap-4 pt-4">
+                <div class="flex gap-4 pt-4 justify-center md:justify-start">
                     <a href="#contact" class="px-6 py-3 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white font-medium transition-colors">
                         Get in Touch
                     </a>
-                    <a href="#insights" id="read-btn" class="px-6 py-3 rounded-lg border border-slate-700 hover:bg-slate-800 font-medium transition-colors">
-                        Read Insights
+                    <a href="#projects" id="read-btn" class="px-6 py-3 rounded-lg border border-slate-700 hover:bg-slate-800 font-medium transition-colors">
+                        View Projects
                     </a>
-                </div>
-            </div>
-            
-            <!-- Hero Stats Box -->
-            <div id="stats-box" class="hidden md:block w-80 p-6 rounded-2xl border bg-slate-800/50 border-slate-700">
-                <div class="space-y-6">
-                    <div class="flex items-center gap-4">
-                        <div class="p-3 bg-blue-500/10 rounded-lg text-blue-500">
-                            <i data-lucide="database" class="w-6 h-6"></i>
-                        </div>
-                        <div>
-                            <div class="text-sm font-medium opacity-70">Data Points Analyzed</div>
-                            <div class="text-2xl font-bold">1.2M+</div>
-                        </div>
-                    </div>
-                    <div class="flex items-center gap-4">
-                        <div class="p-3 bg-emerald-500/10 rounded-lg text-emerald-500">
-                            <i data-lucide="battery-charging" class="w-6 h-6"></i>
-                        </div>
-                        <div>
-                            <div class="text-sm font-medium opacity-70">Cells Tested</div>
-                            <div class="text-2xl font-bold">500+</div>
-                        </div>
-                    </div>
-                    <div class="flex items-center gap-4">
-                        <div class="p-3 bg-purple-500/10 rounded-lg text-purple-500">
-                            <i data-lucide="cpu" class="w-6 h-6"></i>
-                        </div>
-                        <div>
-                            <div class="text-sm font-medium opacity-70">Models Deployed</div>
-                            <div class="text-2xl font-bold">15</div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -281,7 +249,7 @@
             <a href="#" class="social-icon p-4 rounded-full transition-transform hover:-translate-y-1 bg-slate-800 hover:bg-slate-700">
                 <i data-lucide="github" class="w-6 h-6"></i>
             </a>
-            <a href="#" class="social-icon p-4 rounded-full transition-transform hover:-translate-y-1 bg-slate-800 hover:bg-slate-700">
+            <a href="https://www.linkedin.com/in/yi-li-447413a9/" target="_blank" rel="noopener noreferrer" class="social-icon p-4 rounded-full transition-transform hover:-translate-y-1 bg-slate-800 hover:bg-slate-700">
                 <i data-lucide="linkedin" class="w-6 h-6"></i>
             </a>
             <a href="mailto:hello@example.com" class="social-icon p-4 rounded-full transition-transform hover:-translate-y-1 bg-slate-800 hover:bg-slate-700">
@@ -289,7 +257,7 @@
             </a>
         </div>
         <p class="text-sm text-slate-600">
-            © 2025 Battery Engineer Portfolio.
+            © 2025 Yili Li. All rights reserved.
         </p>
     </section>
 
@@ -313,8 +281,6 @@
         
         // Sections & Text Elements to update
         const heroText = document.getElementById('hero-text');
-        const badge = document.getElementById('badge');
-        const statsBox = document.getElementById('stats-box');
         const expertiseSection = document.getElementById('expertise-section');
         const projectsSection = document.getElementById('projects');
         const readBtn = document.getElementById('read-btn');
@@ -338,9 +304,7 @@
                 mobileMenu.className = isMenuOpen ? "md:hidden border-t border-slate-800 bg-slate-900 block" : "hidden";
                 
                 logoBg.className = "p-2 rounded-lg bg-emerald-500/20 text-emerald-400";
-                badge.className = "inline-flex items-center gap-2 px-3 py-1 rounded-full text-sm font-medium bg-emerald-500/10 text-emerald-400";
                 
-                statsBox.className = "hidden md:block w-80 p-6 rounded-2xl border bg-slate-800/50 border-slate-700";
                 expertiseSection.className = "py-12 border-y bg-slate-800/30 border-slate-800";
                 projectsSection.className = "py-20 bg-slate-800/50";
                 
@@ -371,9 +335,7 @@
                 mobileMenu.className = isMenuOpen ? "md:hidden border-t border-slate-200 bg-white block" : "hidden";
                 
                 logoBg.className = "p-2 rounded-lg bg-emerald-600 text-white";
-                badge.className = "inline-flex items-center gap-2 px-3 py-1 rounded-full text-sm font-medium bg-emerald-100 text-emerald-800";
                 
-                statsBox.className = "hidden md:block w-80 p-6 rounded-2xl border bg-white border-slate-200 shadow-xl";
                 expertiseSection.className = "py-12 border-y bg-slate-50 border-slate-200";
                 projectsSection.className = "py-20 bg-slate-50";
                 
