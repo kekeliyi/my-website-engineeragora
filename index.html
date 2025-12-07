@@ -131,42 +131,7 @@
                 </div>
             </section>
 
-            <!-- THE "DOMAIN ADVANTAGE" SECTION -->
-            <section class="py-16 border-t border-slate-800/50 bg-slate-800/20">
-                <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div class="mb-10 text-center">
-                        <h2 class="text-2xl font-bold">Why Domain Knowledge Matters in AI</h2>
-                        <p class="text-slate-400 mt-2">Data and Physics must go hand-in-hand.</p>
-                    </div>
-                    
-                    <div class="grid md:grid-cols-2 gap-8">
-                        <!-- Left: The Problem -->
-                        <div class="p-6 rounded-xl border border-red-900/30 bg-red-900/10">
-                            <h3 class="text-red-400 font-bold flex items-center gap-2 mb-4">
-                                <i data-lucide="x-circle" class="w-5 h-5"></i> Standard Data Engineering
-                            </h3>
-                            <ul class="space-y-3 text-slate-400 text-sm">
-                                <li class="flex gap-2"><span class="text-red-500">•</span> Blindsly cleans "outliers" that are actually failure modes.</li>
-                                <li class="flex gap-2"><span class="text-red-500">•</span> Treats all battery data as linear/stationary.</li>
-                                <li class="flex gap-2"><span class="text-red-500">•</span> Discards subtle electrochemical features (e.g., dQ/dV peaks) during compression.</li>
-                            </ul>
-                        </div>
-
-                        <!-- Right: Your Solution -->
-                        <div class="p-6 rounded-xl border border-emerald-900/30 bg-emerald-900/10">
-                            <h3 class="text-emerald-400 font-bold flex items-center gap-2 mb-4">
-                                <i data-lucide="check-circle" class="w-5 h-5"></i> My Approach
-                            </h3>
-                            <ul class="space-y-3 text-slate-300 text-sm">
-                                <li class="flex gap-2"><span class="text-emerald-500">•</span> <strong class="text-white">Physics-Aware Cleaning:</strong> I know which noise is actually a signal (e.g. plating).</li>
-                                <li class="flex gap-2"><span class="text-emerald-500">•</span> <strong class="text-white">Full Context:</strong> Integration of cell chemistry data into pack-level ML models.</li>
-                                <li class="flex gap-2"><span class="text-emerald-500">•</span> <strong class="text-white">Feature Engineering:</strong> Extracting specific electrochemical indicators before training.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
+            
             <!-- Engineering-Data Gap Section -->
             <section class="pb-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
                 <div class="bg-slate-800/60 border border-slate-700 rounded-2xl p-8 md:p-10 shadow-lg">
@@ -196,6 +161,84 @@
                                 I know the physics of the cell from development to race day. I preserve "outliers" that represent real physical limits. I use AI not just to fit curves, but to uncover the complex, non-linear relationships between <strong>manufacturing inputs</strong> and <strong>track performance</strong>.
                             </p>
                         </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Interactive Visualizer -->
+            <section class="pb-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+                <div class="bg-slate-800/60 border border-slate-700 rounded-2xl p-8 md:p-10 shadow-lg space-y-8">
+                    <div class="text-center">
+                        <p class="text-xs font-bold tracking-[0.25rem] text-slate-400 mb-4">THE FULL-CYCLE ADVANTAGE</p>
+                        <div class="h-px w-full bg-gradient-to-r from-emerald-500/40 via-blue-500/40 to-emerald-500/40"></div>
+                    </div>
+
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
+                        <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-700 flex flex-col items-center gap-3">
+                            <div class="w-10 h-10 rounded-full flex items-center justify-center bg-white text-emerald-600 shadow">
+                                <i data-lucide="microscope" class="w-5 h-5"></i>
+                            </div>
+                            <div class="text-sm font-semibold leading-tight">Cell<br>Development</div>
+                        </div>
+                        <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-700 flex flex-col items-center gap-3">
+                            <div class="w-10 h-10 rounded-full flex items-center justify-center bg-white text-emerald-600 shadow">
+                                <i data-lucide="layers" class="w-5 h-5"></i>
+                            </div>
+                            <div class="text-sm font-semibold leading-tight">Pack<br>Design</div>
+                        </div>
+                        <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-700 flex flex-col items-center gap-3">
+                            <div class="w-10 h-10 rounded-full flex items-center justify-center bg-white text-emerald-600 shadow">
+                                <i data-lucide="factory" class="w-5 h-5"></i>
+                            </div>
+                            <div class="text-sm font-semibold leading-tight">Production<br>Traceability</div>
+                        </div>
+                        <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-700 flex flex-col items-center gap-3">
+                            <div class="w-10 h-10 rounded-full flex items-center justify-center bg-white text-emerald-600 shadow">
+                                <i data-lucide="brain-circuit" class="w-5 h-5"></i>
+                            </div>
+                            <div class="text-sm font-semibold leading-tight">Physics<br>Informed AI</div>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-100 text-slate-800 rounded-xl p-5 border-l-4 border-emerald-500 font-mono text-sm leading-6">
+                        <div class="font-bold text-emerald-600 mb-2">&gt; MODEL TRAINING LOG:</div>
+                        <p>&gt; WARNING: Outlier detected in Cycle 50.</p>
+                        <p>&gt; STANDARD AI ACTION: Delete data point (Clean).</p>
+                        <p>&gt; MY ACTION: <span class="text-emerald-600 font-bold">Keep Data.</span> Correlates with separator stress.</p>
+                        <p>&gt; RESULT: Early prediction of failure achieved.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Core Philosophy Section -->
+            <section class="pb-24 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="p-6 rounded-2xl bg-slate-800/60 border border-slate-700 shadow-lg">
+                        <div class="w-10 h-10 rounded-full flex items-center justify-center bg-white text-emerald-600 mb-4 shadow">
+                            <i data-lucide="link" class="w-5 h-5"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Breaking Silos</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed">
+                            Traditional development isolates cell data from pack manufacturing. I build systems that preserve information integrity across the entire value chain, ensuring no data is lost in handoffs.
+                        </p>
+                    </div>
+                    <div class="p-6 rounded-2xl bg-slate-800/60 border border-slate-700 shadow-lg">
+                        <div class="w-10 h-10 rounded-full flex items-center justify-center bg-white text-emerald-600 mb-4 shadow">
+                            <i data-lucide="database" class="w-5 h-5"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Traceability Architecture</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed">
+                            I developed a proprietary system linking <span class="text-emerald-400 font-semibold">Cell EOL data</span> to <span class="text-emerald-400 font-semibold">Pack Manufacturing</span>. This creates a permanent digital passport for every battery pack.
+                        </p>
+                    </div>
+                    <div class="p-6 rounded-2xl bg-slate-800/60 border border-slate-700 shadow-lg">
+                        <div class="w-10 h-10 rounded-full flex items-center justify-center bg-white text-emerald-600 mb-4 shadow">
+                            <i data-lucide="search-check" class="w-5 h-5"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Race-to-Cell Resolution</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed">
+                            When a track issue arises, we don't guess. We trace. My systems allow instant drill-down from vehicle telemetry back to specific cell batch manufacturing conditions.
+                        </p>
                     </div>
                 </div>
             </section>
