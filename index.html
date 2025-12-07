@@ -179,10 +179,10 @@
             
             <!-- Engineering-Data Gap Section -->
             <section class="pb-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
-                <div class="bg-slate-800/60 border border-slate-700 rounded-2xl p-8 md:p-10 shadow-lg">
+                <div class="theme-panel rounded-2xl p-8 md:p-10 bg-white text-slate-800 shadow-md border border-slate-200">
                     <div class="mb-8 text-center md:text-left">
                         <h2 class="text-3xl font-bold mb-2">The Engineering-Data Gap</h2>
-                        <p class="text-slate-400 desc-text">Why pure Data Science often fails in Battery Engineering.</p>
+                        <p class="text-slate-700 desc-text">Why pure Data Science often fails in Battery Engineering.</p>
                     </div>
                     <div class="grid md:grid-cols-2 gap-6">
                         <!-- Blind Data Approach -->
@@ -191,7 +191,7 @@
                                 <i data-lucide="filter-x" class="w-5 h-5"></i>
                             </div>
                             <h3 class="text-xl font-semibold mb-3 text-rose-400">The "Blind" Data Approach</h3>
-                            <p class="text-slate-300 text-sm leading-relaxed">
+                            <p class="text-slate-700 text-sm leading-relaxed">
                                 Standard data scientists treat physical anomalies as statistical noise. They "clean" the data to fit a curve, inadvertently stripping away the subtle signals of lithium plating or thermal degradation because they lack the physical context.
                             </p>
                         </div>
@@ -202,7 +202,7 @@
                                 <i data-lucide="check-circle-2" class="w-5 h-5"></i>
                             </div>
                             <h3 class="text-xl font-semibold mb-3 text-emerald-400">My Physics-Informed Approach</h3>
-                            <p class="text-slate-300 text-sm leading-relaxed">
+                            <p class="text-slate-700 text-sm leading-relaxed">
                                 I know the physics of the cell from development to race day. I preserve "outliers" that represent real physical limits. I use AI not just to fit curves, but to uncover the complex, non-linear relationships between <strong>manufacturing inputs</strong> and <strong>track performance</strong>.
                             </p>
                         </div>
@@ -214,30 +214,30 @@
             <!-- Core Philosophy Section -->
             <section class="pb-24 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
                 <div class="grid md:grid-cols-3 gap-6">
-                    <div class="p-6 rounded-2xl bg-slate-800/60 border border-slate-700 shadow-lg">
+                    <div class="theme-card p-6 rounded-2xl shadow-md bg-white border border-slate-200">
                         <div class="w-10 h-10 rounded-full flex items-center justify-center bg-white text-emerald-600 mb-4 shadow">
                             <i data-lucide="link" class="w-5 h-5"></i>
                         </div>
                         <h3 class="text-xl font-semibold mb-2">Breaking Silos</h3>
-                        <p class="text-slate-300 text-sm leading-relaxed">
+                        <p class="text-slate-700 text-sm leading-relaxed">
                             Traditional development isolates cell data from pack manufacturing. I build systems that preserve information integrity across the entire value chain, ensuring no data is lost in handoffs.
                         </p>
                     </div>
-                    <div class="p-6 rounded-2xl bg-slate-800/60 border border-slate-700 shadow-lg">
+                    <div class="theme-card p-6 rounded-2xl shadow-md bg-white border border-slate-200">
                         <div class="w-10 h-10 rounded-full flex items-center justify-center bg-white text-emerald-600 mb-4 shadow">
                             <i data-lucide="database" class="w-5 h-5"></i>
                         </div>
                         <h3 class="text-xl font-semibold mb-2">Traceability Architecture</h3>
-                        <p class="text-slate-300 text-sm leading-relaxed">
-                            I developed a proprietary system linking <span class="text-emerald-400 font-semibold">Cell EOL data</span> to <span class="text-emerald-400 font-semibold">Pack Manufacturing</span>. This creates a permanent digital passport for every battery pack.
+                        <p class="text-slate-700 text-sm leading-relaxed">
+                            I developed a proprietary system linking <span class="text-emerald-600 font-semibold">Cell EOL data</span> to <span class="text-emerald-600 font-semibold">Pack Manufacturing</span>. This creates a permanent digital passport for every battery pack.
                         </p>
                     </div>
-                    <div class="p-6 rounded-2xl bg-slate-800/60 border border-slate-700 shadow-lg">
+                    <div class="theme-card p-6 rounded-2xl shadow-md bg-white border border-slate-200">
                         <div class="w-10 h-10 rounded-full flex items-center justify-center bg-white text-emerald-600 mb-4 shadow">
                             <i data-lucide="search-check" class="w-5 h-5"></i>
                         </div>
                         <h3 class="text-xl font-semibold mb-2">Race-to-Cell Resolution</h3>
-                        <p class="text-slate-300 text-sm leading-relaxed">
+                        <p class="text-slate-700 text-sm leading-relaxed">
                             When a track issue arises, we don't guess. We trace. My systems allow instant drill-down from vehicle telemetry back to specific cell batch manufacturing conditions.
                         </p>
                     </div>
@@ -510,7 +510,7 @@
                     <div class="grid md:grid-cols-3 gap-8 p-8 md:p-10">
                         <div class="md:col-span-2 space-y-6">
                             <div class="flex items-center gap-4">
-                                <div class="w-14 h-14 rounded-full bg-blue-600 text-white font-bold text-2xl flex items-center justify-center shadow-sm">YL</div>
+                                <div class="w-14 h-14 rounded-full bg-green-600 text-white font-bold text-2xl flex items-center justify-center shadow-sm">YL</div>
                                 <div>
                                     <h2 class="about-heading text-3xl md:text-4xl font-extrabold mb-1 leading-tight">Hello, I’m Yi Li</h2>
                                     <div class="about-role font-semibold text-sm md:text-base leading-snug">Battery Simulation &amp; Digital Analytics Engineer</div>
@@ -670,6 +670,8 @@
             const aboutStatSubs = document.querySelectorAll('.about-stat-sub');
             const aboutLocationIcons = document.querySelectorAll('.about-location-icon');
             const aboutSocialIcons = document.querySelectorAll('.about-social-icon');
+            const themePanels = document.querySelectorAll('.theme-panel');
+            const themeCards = document.querySelectorAll('.theme-card');
 
             if (isDark) {
                 // DARK MODE
@@ -721,6 +723,8 @@
                 aboutStatSubs.forEach(el => el.className = "about-stat-sub text-xs mt-1 text-slate-400");
                 aboutLocationIcons.forEach(el => el.className = "about-location-icon w-5 h-5 text-emerald-300");
                 aboutSocialIcons.forEach(el => el.className = "about-social-icon w-5 h-5 text-slate-200");
+                themePanels.forEach(el => el.className = "theme-panel rounded-2xl p-8 md:p-10 bg-slate-800/60 border border-slate-700 shadow-lg");
+                themeCards.forEach(el => el.className = "theme-card p-6 rounded-2xl shadow-lg bg-slate-800/60 border border-slate-700");
 
             } else {
                 // LIGHT MODE
@@ -765,13 +769,15 @@
                 aboutStats.forEach(el => el.className = "about-stat p-5 rounded-xl bg-slate-50 border border-slate-200 shadow-sm");
                 aboutSocials.forEach(el => el.className = "about-social social-icon p-3 rounded-lg bg-slate-100 hover:bg-slate-200 transition-colors border border-slate-200");
                 aboutHeadings.forEach(el => el.className = "about-heading text-3xl md:text-4xl font-extrabold mb-1 leading-tight text-slate-900");
-                aboutRoles.forEach(el => el.className = "about-role font-semibold text-sm md:text-base leading-snug text-blue-700");
+                aboutRoles.forEach(el => el.className = "about-role font-semibold text-sm md:text-base leading-snug text-emerald-700");
                 aboutBodies.forEach(el => el.className = "about-body space-y-4 text-base leading-relaxed text-slate-700");
-                aboutStatTitles.forEach(el => el.className = "about-stat-title text-2xl font-extrabold mb-1 text-blue-700");
+                aboutStatTitles.forEach(el => el.className = "about-stat-title text-2xl font-extrabold mb-1 text-emerald-700");
                 aboutStatTexts.forEach(el => el.className = "about-stat-text text-sm font-semibold text-slate-800");
                 aboutStatSubs.forEach(el => el.className = "about-stat-sub text-xs mt-1 text-slate-500");
-                aboutLocationIcons.forEach(el => el.className = "about-location-icon w-5 h-5 text-blue-700");
+                aboutLocationIcons.forEach(el => el.className = "about-location-icon w-5 h-5 text-emerald-700");
                 aboutSocialIcons.forEach(el => el.className = "about-social-icon w-5 h-5 text-slate-700");
+                themePanels.forEach(el => el.className = "theme-panel rounded-2xl p-8 md:p-10 bg-white text-slate-800 shadow-md border border-slate-200");
+                themeCards.forEach(el => el.className = "theme-card p-6 rounded-2xl shadow-md bg-white border border-slate-200");
             }
 
             // Ensure current tab highlight respects theme
