@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battery Engineer Portfolio</title>
+    
+    <!-- 1. Tailwind CSS (The Styling Engine) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- 2. Lucide Icons (The Icon Library) -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- 3. Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        /* Smooth scrolling for anchor links */
+        html { scroll-behavior: smooth; }
+    </style>
+</head>
+<!-- The Main App Container: We toggle classes here for Dark/Light mode -->
+<body id="app" class="bg-slate-900 text-slate-100 font-sans transition-colors duration-300">
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-slate-900/90 border-b border-slate-800 backdrop-blur-sm">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <div class="flex items-center gap-2">
+                    <div id="logo-bg" class="p-2 rounded-lg bg-emerald-500/20 text-emerald-400">
+                        <i data-lucide="zap" class="w-5 h-5"></i>
+                    </div>
+                    <span class="font-bold text-xl tracking-tight">Engineer.Io</span>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="#about" class="hover:text-emerald-500 transition-colors">About</a>
+                    <a href="#insights" class="hover:text-emerald-500 transition-colors">Insights</a>
+                    <a href="#projects" class="hover:text-emerald-500 transition-colors">Projects</a>
+                    <a href="#contact" class="hover:text-emerald-500 transition-colors">Contact</a>
+                    
+                    <!-- Theme Toggle Button -->
+                    <button onclick="toggleTheme()" id="theme-btn" class="p-2 rounded-full transition-colors hover:bg-slate-800 text-slate-400">
+                        <!-- Sun/Moon icons handled by JS -->
+                        <i id="theme-icon" data-lucide="sun" class="w-5 h-5"></i>
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center gap-4">
+                    <button onclick="toggleTheme()" id="theme-btn-mobile" class="p-2 rounded-full text-slate-400">
+                        <i id="theme-icon-mobile" data-lucide="sun" class="w-5 h-5"></i>
+                    </button>
+                    <button onclick="toggleMenu()" id="menu-btn" class="p-2 rounded-md hover:bg-slate-800">
+                        <i id="menu-icon" data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden border-t border-slate-800 bg-slate-900">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#about" onclick="toggleMenu()" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-slate-800">About</a>
+                <a href="#insights" onclick="toggleMenu()" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-slate-800">Insights</a>
+                <a href="#projects" onclick="toggleMenu()" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-slate-800">Projects</a>
+                <a href="#contact" onclick="toggleMenu()" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-slate-800">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="about" class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+        <div class="flex flex-col md:flex-row items-start md:items-center gap-12">
+            <div class="flex-1 space-y-6">
+                <div id="badge" class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-sm font-medium bg-emerald-500/10 text-emerald-400">
+                    <i data-lucide="battery-charging" class="w-4 h-4"></i>
+                    <span>Battery Engineering + Data Science</span>
+                </div>
+                <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight leading-tight">
+                    Bridging the gap between <span class="text-emerald-500">electrochemistry</span> and <span class="text-blue-500">machine learning</span>.
+                </h1>
+                <p id="hero-text" class="text-lg md:text-xl max-w-2xl text-slate-400">
+                    I analyze complex battery datasets to predict lifecycle, optimize performance, and uncover industry trends. My goal is to make energy storage smarter.
+                </p>
+                <div class="flex gap-4 pt-4">
+                    <a href="#contact" class="px-6 py-3 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white font-medium transition-colors">
+                        Get in Touch
+                    </a>
+                    <a href="#insights" id="read-btn" class="px-6 py-3 rounded-lg border border-slate-700 hover:bg-slate-800 font-medium transition-colors">
+                        Read Insights
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Hero Stats Box -->
+            <div id="stats-box" class="hidden md:block w-80 p-6 rounded-2xl border bg-slate-800/50 border-slate-700">
+                <div class="space-y-6">
+                    <div class="flex items-center gap-4">
+                        <div class="p-3 bg-blue-500/10 rounded-lg text-blue-500">
+                            <i data-lucide="database" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <div class="text-sm font-medium opacity-70">Data Points Analyzed</div>
+                            <div class="text-2xl font-bold">1.2M+</div>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="p-3 bg-emerald-500/10 rounded-lg text-emerald-500">
+                            <i data-lucide="battery-charging" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <div class="text-sm font-medium opacity-70">Cells Tested</div>
+                            <div class="text-2xl font-bold">500+</div>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="p-3 bg-purple-500/10 rounded-lg text-purple-500">
+                            <i data-lucide="cpu" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <div class="text-sm font-medium opacity-70">Models Deployed</div>
+                            <div class="text-2xl font-bold">15</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expertise Section -->
+    <section id="expertise-section" class="py-12 border-y bg-slate-800/30 border-slate-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="flex flex-col items-center text-center p-4">
+                    <div class="p-4 rounded-full mb-4 bg-slate-800 text-emerald-400 icon-bg">
+                        <i data-lucide="battery-charging" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Cell Chemistry</h3>
+                    <p class="text-sm text-slate-400 desc-text">Deep understanding of Li-ion degradation mechanisms and thermal behaviors.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="flex flex-col items-center text-center p-4">
+                    <div class="p-4 rounded-full mb-4 bg-slate-800 text-emerald-400 icon-bg">
+                        <i data-lucide="terminal" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Data Pipelines</h3>
+                    <p class="text-sm text-slate-400 desc-text">Building robust ETL pipelines to process cycling data from testers (Arbin/Maccor).</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="flex flex-col items-center text-center p-4">
+                    <div class="p-4 rounded-full mb-4 bg-slate-800 text-emerald-400 icon-bg">
+                        <i data-lucide="line-chart" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Predictive Modeling</h3>
+                    <p class="text-sm text-slate-400 desc-text">Using Python & Scikit-learn to forecast SOH and RUL with high accuracy.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industry Insights (Blog) -->
+    <section id="insights" class="py-20 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between mb-12">
+            <div>
+                <h2 class="text-3xl font-bold mb-2">Industry Insights</h2>
+                <p class="text-slate-400 section-sub">My thoughts on the state of battery tech.</p>
+            </div>
+            <a href="#" class="text-emerald-500 hover:text-emerald-400 font-medium flex items-center gap-1">
+                View all on Notion <i data-lucide="chevron-right" class="w-4 h-4"></i>
+            </a>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Article 1 -->
+            <article class="article-card group flex flex-col justify-between p-6 rounded-2xl border transition-all hover:-translate-y-1 bg-slate-800 border-slate-700 hover:border-emerald-500/50">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-xs font-semibold text-emerald-500 uppercase tracking-wider">Market Trends</span>
+                        <span class="text-xs text-slate-500 date-text">Oct 12, 2023</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 group-hover:text-emerald-500 transition-colors">Why LFP is dominating the stationary storage market</h3>
+                    <p class="text-sm mb-6 text-slate-400 excerpt-text">
+                        Analyzing the cost-benefit ratio of Iron Phosphate vs NMC in 2025 grid applications.
+                    </p>
+                </div>
+                <div class="flex items-center gap-2 text-sm font-medium opacity-70 group-hover:opacity-100 transition-opacity">
+                    <i data-lucide="book-open" class="w-4 h-4"></i>
+                    <span>5 min read</span>
+                </div>
+            </article>
+
+            <!-- Article 2 -->
+            <article class="article-card group flex flex-col justify-between p-6 rounded-2xl border transition-all hover:-translate-y-1 bg-slate-800 border-slate-700 hover:border-emerald-500/50">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-xs font-semibold text-emerald-500 uppercase tracking-wider">Machine Learning</span>
+                        <span class="text-xs text-slate-500 date-text">Sep 28, 2023</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 group-hover:text-emerald-500 transition-colors">Feature Engineering for Battery Lifecycle Prediction</h3>
+                    <p class="text-sm mb-6 text-slate-400 excerpt-text">
+                        How to extract meaningful features from dQ/dV curves for better SOH estimation.
+                    </p>
+                </div>
+                <div class="flex items-center gap-2 text-sm font-medium opacity-70 group-hover:opacity-100 transition-opacity">
+                    <i data-lucide="book-open" class="w-4 h-4"></i>
+                    <span>8 min read</span>
+                </div>
+            </article>
+
+            <!-- Article 3 -->
+            <article class="article-card group flex flex-col justify-between p-6 rounded-2xl border transition-all hover:-translate-y-1 bg-slate-800 border-slate-700 hover:border-emerald-500/50">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-xs font-semibold text-emerald-500 uppercase tracking-wider">Engineering</span>
+                        <span class="text-xs text-slate-500 date-text">Aug 15, 2023</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 group-hover:text-emerald-500 transition-colors">The challenges of fast charging in cold climates</h3>
+                    <p class="text-sm mb-6 text-slate-400 excerpt-text">
+                        A look at plating risks and thermal management strategies for EVs in winter.
+                    </p>
+                </div>
+                <div class="flex items-center gap-2 text-sm font-medium opacity-70 group-hover:opacity-100 transition-opacity">
+                    <i data-lucide="book-open" class="w-4 h-4"></i>
+                    <span>6 min read</span>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-slate-800/50 section-bg">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold mb-12">Featured Projects</h2>
+            <div class="space-y-8">
+                <!-- Project 1 -->
+                <div class="project-card flex flex-col md:flex-row gap-6 p-6 rounded-2xl border bg-slate-900 border-slate-700">
+                    <div class="flex-1">
+                        <h3 class="text-2xl font-bold mb-2">Li-Ion Cycle Life Predictor</h3>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="tech-tag px-2 py-1 rounded text-xs font-mono bg-slate-800 text-emerald-400">Python</span>
+                            <span class="tech-tag px-2 py-1 rounded text-xs font-mono bg-slate-800 text-emerald-400">TensorFlow</span>
+                            <span class="tech-tag px-2 py-1 rounded text-xs font-mono bg-slate-800 text-emerald-400">Pandas</span>
+                        </div>
+                        <p class="mb-6 text-slate-400 desc-text">Built a transformer-based model to predict remaining useful life (RUL) of 18650 cells using early-cycle data. Achieved 92% accuracy on the NASA battery dataset.</p>
+                        <a href="#" class="inline-flex items-center gap-2 text-emerald-500 hover:text-emerald-400 font-medium">
+                            View Project <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="project-card flex flex-col md:flex-row gap-6 p-6 rounded-2xl border bg-slate-900 border-slate-700">
+                    <div class="flex-1">
+                        <h3 class="text-2xl font-bold mb-2">BMS Data Visualization Dashboard</h3>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="tech-tag px-2 py-1 rounded text-xs font-mono bg-slate-800 text-emerald-400">React</span>
+                            <span class="tech-tag px-2 py-1 rounded text-xs font-mono bg-slate-800 text-emerald-400">Plotly</span>
+                            <span class="tech-tag px-2 py-1 rounded text-xs font-mono bg-slate-800 text-emerald-400">InfluxDB</span>
+                        </div>
+                        <p class="mb-6 text-slate-400 desc-text">A real-time dashboard for monitoring voltage spreads and temperature deltas across 4 modules in a test pack. Helps identify weak cells instantly.</p>
+                        <a href="#" class="inline-flex items-center gap-2 text-emerald-500 hover:text-emerald-400 font-medium">
+                            View Project <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 max-w-3xl mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold mb-6">Let's Connect</h2>
+        <p class="text-lg mb-8 text-slate-400 desc-text">
+            Always open to discussing battery management systems, data infrastructure, or new opportunities in the energy sector.
+        </p>
+        <div class="flex justify-center gap-6 mb-12">
+            <a href="#" class="social-icon p-4 rounded-full transition-transform hover:-translate-y-1 bg-slate-800 hover:bg-slate-700">
+                <i data-lucide="github" class="w-6 h-6"></i>
+            </a>
+            <a href="#" class="social-icon p-4 rounded-full transition-transform hover:-translate-y-1 bg-slate-800 hover:bg-slate-700">
+                <i data-lucide="linkedin" class="w-6 h-6"></i>
+            </a>
+            <a href="mailto:hello@example.com" class="social-icon p-4 rounded-full transition-transform hover:-translate-y-1 bg-slate-800 hover:bg-slate-700">
+                <i data-lucide="mail" class="w-6 h-6"></i>
+            </a>
+        </div>
+        <p class="text-sm text-slate-600">
+            © 2025 Battery Engineer Portfolio.
+        </p>
+    </section>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // 1. Initialize Icons
+        lucide.createIcons();
+
+        // 2. State Management
+        let isDark = true;
+        let isMenuOpen = false;
+
+        const body = document.getElementById('app');
+        const navbar = document.getElementById('navbar');
+        const logoBg = document.getElementById('logo-bg');
+        const themeBtns = [document.getElementById('theme-btn'), document.getElementById('theme-btn-mobile')];
+        const themeIcons = [document.getElementById('theme-icon'), document.getElementById('theme-icon-mobile')];
+        const menuBtn = document.getElementById('menu-btn');
+        const menuIcon = document.getElementById('menu-icon');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        // Sections & Text Elements to update
+        const heroText = document.getElementById('hero-text');
+        const badge = document.getElementById('badge');
+        const statsBox = document.getElementById('stats-box');
+        const expertiseSection = document.getElementById('expertise-section');
+        const projectsSection = document.getElementById('projects');
+        const readBtn = document.getElementById('read-btn');
+        
+        // Groups of elements
+        const iconBgs = document.querySelectorAll('.icon-bg');
+        const descTexts = document.querySelectorAll('.desc-text');
+        const excerptTexts = document.querySelectorAll('.excerpt-text');
+        const sectionSubs = document.querySelectorAll('.section-sub');
+        const dateTexts = document.querySelectorAll('.date-text');
+        const articleCards = document.querySelectorAll('.article-card');
+        const projectCards = document.querySelectorAll('.project-card');
+        const techTags = document.querySelectorAll('.tech-tag');
+        const socialIcons = document.querySelectorAll('.social-icon');
+
+        function updateUI() {
+            if (isDark) {
+                // DARK MODE STYLES
+                body.className = "bg-slate-900 text-slate-100 font-sans transition-colors duration-300";
+                navbar.className = "fixed w-full z-50 transition-all duration-300 bg-slate-900/90 border-b border-slate-800 backdrop-blur-sm";
+                mobileMenu.className = isMenuOpen ? "md:hidden border-t border-slate-800 bg-slate-900 block" : "hidden";
+                
+                logoBg.className = "p-2 rounded-lg bg-emerald-500/20 text-emerald-400";
+                badge.className = "inline-flex items-center gap-2 px-3 py-1 rounded-full text-sm font-medium bg-emerald-500/10 text-emerald-400";
+                
+                statsBox.className = "hidden md:block w-80 p-6 rounded-2xl border bg-slate-800/50 border-slate-700";
+                expertiseSection.className = "py-12 border-y bg-slate-800/30 border-slate-800";
+                projectsSection.className = "py-20 bg-slate-800/50";
+                
+                readBtn.className = "px-6 py-3 rounded-lg border border-slate-700 hover:bg-slate-800 font-medium transition-colors";
+                
+                // Update lists
+                iconBgs.forEach(el => el.className = "p-4 rounded-full mb-4 bg-slate-800 text-emerald-400");
+                descTexts.forEach(el => el.classList.replace('text-slate-600', 'text-slate-400'));
+                excerptTexts.forEach(el => el.classList.replace('text-slate-600', 'text-slate-400'));
+                sectionSubs.forEach(el => el.classList.replace('text-slate-600', 'text-slate-400'));
+                dateTexts.forEach(el => el.classList.replace('text-slate-400', 'text-slate-500'));
+                
+                articleCards.forEach(el => el.className = "group flex flex-col justify-between p-6 rounded-2xl border transition-all hover:-translate-y-1 bg-slate-800 border-slate-700 hover:border-emerald-500/50");
+                projectCards.forEach(el => el.className = "flex flex-col md:flex-row gap-6 p-6 rounded-2xl border bg-slate-900 border-slate-700");
+                techTags.forEach(el => el.className = "px-2 py-1 rounded text-xs font-mono bg-slate-800 text-emerald-400");
+                socialIcons.forEach(el => el.className = "p-4 rounded-full transition-transform hover:-translate-y-1 bg-slate-800 hover:bg-slate-700");
+                
+                // Icons
+                themeIcons.forEach(icon => {
+                    icon.setAttribute('data-lucide', 'sun');
+                });
+                themeBtns.forEach(btn => btn.className = "p-2 rounded-full transition-colors hover:bg-slate-800 text-slate-400");
+
+            } else {
+                // LIGHT MODE STYLES
+                body.className = "bg-slate-50 text-slate-900 font-sans transition-colors duration-300";
+                navbar.className = "fixed w-full z-50 transition-all duration-300 bg-white/90 border-b border-slate-200 backdrop-blur-sm";
+                mobileMenu.className = isMenuOpen ? "md:hidden border-t border-slate-200 bg-white block" : "hidden";
+                
+                logoBg.className = "p-2 rounded-lg bg-emerald-600 text-white";
+                badge.className = "inline-flex items-center gap-2 px-3 py-1 rounded-full text-sm font-medium bg-emerald-100 text-emerald-800";
+                
+                statsBox.className = "hidden md:block w-80 p-6 rounded-2xl border bg-white border-slate-200 shadow-xl";
+                expertiseSection.className = "py-12 border-y bg-slate-50 border-slate-200";
+                projectsSection.className = "py-20 bg-slate-50";
+                
+                readBtn.className = "px-6 py-3 rounded-lg border border-slate-300 hover:bg-slate-100 font-medium transition-colors";
+
+                // Update lists
+                iconBgs.forEach(el => el.className = "p-4 rounded-full mb-4 bg-white text-emerald-600 shadow-sm");
+                descTexts.forEach(el => el.classList.replace('text-slate-400', 'text-slate-600'));
+                excerptTexts.forEach(el => el.classList.replace('text-slate-400', 'text-slate-600'));
+                sectionSubs.forEach(el => el.classList.replace('text-slate-400', 'text-slate-600'));
+                dateTexts.forEach(el => el.classList.replace('text-slate-500', 'text-slate-400'));
+                
+                articleCards.forEach(el => el.className = "group flex flex-col justify-between p-6 rounded-2xl border transition-all hover:-translate-y-1 bg-white border-slate-200 hover:shadow-lg hover:border-emerald-500/30");
+                projectCards.forEach(el => el.className = "flex flex-col md:flex-row gap-6 p-6 rounded-2xl border bg-white border-slate-200 shadow-sm");
+                techTags.forEach(el => el.className = "px-2 py-1 rounded text-xs font-mono bg-slate-100 text-slate-700");
+                socialIcons.forEach(el => el.className = "p-4 rounded-full transition-transform hover:-translate-y-1 bg-slate-100 hover:bg-slate-200");
+
+                // Icons
+                themeIcons.forEach(icon => {
+                    icon.setAttribute('data-lucide', 'moon');
+                });
+                themeBtns.forEach(btn => btn.className = "p-2 rounded-full transition-colors hover:bg-slate-100 text-slate-600");
+            }
+            
+            // Re-render icons after changing data-lucide attributes
+            lucide.createIcons();
+        }
+
+        function toggleTheme() {
+            isDark = !isDark;
+            updateUI();
+        }
+
+        function toggleMenu() {
+            isMenuOpen = !isMenuOpen;
+            // Update Menu Icon
+            if (isMenuOpen) {
+                menuIcon.setAttribute('data-lucide', 'x');
+                menuBtn.className = isDark ? "p-2 rounded-md hover:bg-slate-800" : "p-2 rounded-md hover:bg-slate-200";
+            } else {
+                menuIcon.setAttribute('data-lucide', 'menu');
+                menuBtn.className = isDark ? "p-2 rounded-md hover:bg-slate-800" : "p-2 rounded-md hover:bg-slate-200";
+            }
+            updateUI();
+        }
+
+        // Initial Render
+        updateUI();
+
+    </script>
+</body>
+</html>
