@@ -23,10 +23,10 @@
     </style>
 </head>
 
-<body id="app" class="bg-slate-900 text-slate-100 font-sans transition-colors duration-300 min-h-screen flex flex-col">
+<body id="app" class="bg-slate-50 text-slate-900 font-sans transition-colors duration-300 min-h-screen flex flex-col">
 
     <!-- NAVIGATION -->
-    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-slate-900/90 border-b border-slate-800 backdrop-blur-sm">
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-white/90 border-b border-slate-200 backdrop-blur-sm">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
                 <!-- Logo -->
@@ -39,23 +39,23 @@
                 
                 <!-- Desktop Tabs -->
                 <div class="hidden md:flex items-center gap-1">
-                    <button onclick="switchPage('insights')" class="nav-item px-4 py-2 rounded-md text-sm font-medium transition-colors hover:bg-slate-800 text-slate-400">Prof. Insights</button>
-                    <button onclick="switchPage('portfolio')" class="nav-item px-4 py-2 rounded-md text-sm font-medium transition-colors hover:bg-slate-800 text-slate-400">CV & Portfolio</button>
-                    <button onclick="switchPage('personal')" class="nav-item px-4 py-2 rounded-md text-sm font-medium transition-colors hover:bg-slate-800 text-slate-400">Personal Blog</button>
-                    <button onclick="switchPage('about')" class="nav-item px-4 py-2 rounded-md text-sm font-medium transition-colors hover:bg-slate-800 text-slate-400">About Me</button>
+                    <button onclick="switchPage('insights')" class="nav-item px-4 py-2 rounded-md text-sm font-medium transition-colors hover:bg-slate-100 text-slate-500">Prof. Insights</button>
+                    <button onclick="switchPage('about')" class="nav-item px-4 py-2 rounded-md text-sm font-medium transition-colors hover:bg-slate-100 text-slate-500">About Me</button>
+                    <button onclick="switchPage('portfolio')" class="nav-item px-4 py-2 rounded-md text-sm font-medium transition-colors hover:bg-slate-100 text-slate-500">CV & Portfolio</button>
+                    <button onclick="switchPage('personal')" class="nav-item px-4 py-2 rounded-md text-sm font-medium transition-colors hover:bg-slate-100 text-slate-500">Personal Blog</button>
                     
                     <div class="w-px h-6 bg-slate-700 mx-2"></div>
 
                     <!-- Theme Toggle -->
-                    <button onclick="toggleTheme()" id="theme-btn" class="p-2 rounded-full transition-colors hover:bg-slate-800 text-slate-400">
-                        <i id="theme-icon" data-lucide="sun" class="w-5 h-5"></i>
+                    <button onclick="toggleTheme()" id="theme-btn" class="p-2 rounded-full transition-colors hover:bg-slate-100 text-slate-600">
+                        <i id="theme-icon" data-lucide="moon" class="w-5 h-5"></i>
                     </button>
                 </div>
 
                 <!-- Mobile Menu Button -->
                 <div class="md:hidden flex items-center gap-4">
-                    <button onclick="toggleTheme()" id="theme-btn-mobile" class="p-2 rounded-full text-slate-400">
-                        <i id="theme-icon-mobile" data-lucide="sun" class="w-5 h-5"></i>
+                    <button onclick="toggleTheme()" id="theme-btn-mobile" class="p-2 rounded-full text-slate-600">
+                        <i id="theme-icon-mobile" data-lucide="moon" class="w-5 h-5"></i>
                     </button>
                     <button onclick="toggleMenu()" id="menu-btn" class="p-2 rounded-md hover:bg-slate-800">
                         <i id="menu-icon" data-lucide="menu" class="w-6 h-6"></i>
@@ -65,12 +65,12 @@
         </div>
 
         <!-- Mobile Dropdown -->
-        <div id="mobile-menu" class="hidden md:hidden border-t border-slate-800 bg-slate-900">
+        <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 bg-white">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <button onclick="switchPage('insights')" class="block w-full text-left px-3 py-2 rounded-md text-base font-medium hover:bg-slate-800 text-slate-400">Professional Insights</button>
-                <button onclick="switchPage('portfolio')" class="block w-full text-left px-3 py-2 rounded-md text-base font-medium hover:bg-slate-800 text-slate-400">CV & Portfolio</button>
-                <button onclick="switchPage('personal')" class="block w-full text-left px-3 py-2 rounded-md text-base font-medium hover:bg-slate-800 text-slate-400">Personal Blog</button>
-                <button onclick="switchPage('about')" class="block w-full text-left px-3 py-2 rounded-md text-base font-medium hover:bg-slate-800 text-slate-400">About Me</button>
+                <button onclick="switchPage('insights')" class="block w-full text-left px-3 py-2 rounded-md text-base font-medium hover:bg-slate-100 text-slate-500">Professional Insights</button>
+                <button onclick="switchPage('about')" class="block w-full text-left px-3 py-2 rounded-md text-base font-medium hover:bg-slate-100 text-slate-500">About Me</button>
+                <button onclick="switchPage('portfolio')" class="block w-full text-left px-3 py-2 rounded-md text-base font-medium hover:bg-slate-100 text-slate-500">CV & Portfolio</button>
+                <button onclick="switchPage('personal')" class="block w-full text-left px-3 py-2 rounded-md text-base font-medium hover:bg-slate-100 text-slate-500">Personal Blog</button>
             </div>
         </div>
     </nav>
@@ -332,7 +332,7 @@
                                     <div class="w-2 h-2 bg-slate-600 rounded-full"></div>
                                 </div>
                                 <span class="text-xs font-mono text-slate-500 mb-1 block">06/2023 - 01/2024</span>
-                                <h4 class="font-bold text-lg leading-tight">Battery System Modeling Engineer</h4>
+                                <h4 class="font-bold text-lg leading-tight">Battery System Modeling Technical Specialist</h4>
                                 <div class="text-slate-500 text-sm mb-2 desc-text">Envision Energy COE</div>
                                 <p class="text-sm text-slate-400 desc-text">
                                     Accounted for cell-to-cell variance in massive grid systems. Used probabilistic physics models to improve lifetime prediction accuracy by >50%.
@@ -505,49 +505,62 @@
 
         <!-- 5. ABOUT PAGE -->
         <div id="page-about" class="page-section hidden fade-in">
-            <div class="max-w-3xl mx-auto px-4 py-20">
-                <div class="flex flex-col md:flex-row gap-8 items-center mb-12">
-                    <div class="w-32 h-32 rounded-full overflow-hidden border-4 border-emerald-500/20 flex-shrink-0 card-bg">
-                        <!-- UPDATED PATH BELOW -->
-                        <img src="myfiles/yili_photo.jpeg" alt="Yi Li" class="w-full h-full object-cover">
+            <div class="max-w-6xl mx-auto px-4 py-20 space-y-10">
+                <div class="about-card bg-white text-slate-800 rounded-2xl shadow-md border border-slate-200">
+                    <div class="grid md:grid-cols-3 gap-8 p-8 md:p-10">
+                        <div class="md:col-span-2 space-y-6">
+                            <div class="flex items-center gap-4">
+                                <div class="w-14 h-14 rounded-full bg-blue-600 text-white font-bold text-2xl flex items-center justify-center shadow-sm">YL</div>
+                                <div>
+                                    <h2 class="about-heading text-3xl md:text-4xl font-extrabold mb-1 leading-tight">Hello, I’m Yi Li</h2>
+                                    <div class="about-role font-semibold text-sm md:text-base leading-snug">Battery Simulation &amp; Digital Analytics Engineer</div>
+                                </div>
+                            </div>
+                            <div class="about-body space-y-4 text-base leading-relaxed">
+                                <p>
+                                    Unlike traditional battery or data engineers who specialise in only one slice of the system, my experience spans the entire battery chain: <strong>cell physics</strong>, <strong>cell-to-cell behaviour</strong>, and <strong>degradation mechanisms</strong>; module/pack design, integration, and production realities; and large-scale testing, data architecture, and machine-learning health estimation.
+                                </p>
+                                <p>
+                                    Because I understand both the batteries and the data, I build digital models and SOH pipelines that genuinely reflect electrochemical reality, not just statistical patterns. Features a typical data engineer might ignore as “noise” are often the exact signatures I preserve to improve accuracy, interpretability, and physical grounding.
+                                </p>
+                                <p>
+                                    This integrated perspective allows me to design state-of-the-art digital twins, reliable lifetime prediction tools, and data-driven decision systems that unlock performance, safety, and operational efficiency.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="md:col-span-1 space-y-4">
+                            <div class="about-stat p-5 rounded-xl bg-slate-50 border border-slate-200 shadow-sm">
+                                <div class="about-stat-title text-2xl font-extrabold mb-1">PhD</div>
+                                <div class="about-stat-text text-sm font-semibold">Electrical Engineering</div>
+                                <div class="about-stat-sub text-xs mt-1">Vrije Universiteit Brussel</div>
+                            </div>
+                            <div class="about-stat p-5 rounded-xl bg-slate-50 border border-slate-200 shadow-sm">
+                                <div class="about-stat-title text-3xl font-extrabold mb-1">2,700+</div>
+                                <div class="about-stat-text text-sm font-semibold">Academic Citations</div>
+                                <div class="about-stat-sub text-xs mt-1">Influential Battery Health Research</div>
+                            </div>
+                            <div class="about-stat p-5 rounded-xl bg-slate-50 border border-slate-200 shadow-sm">
+                                <div class="about-stat-text text-base font-semibold flex items-center gap-2">
+                                    <i data-lucide="map-pin" class="about-location-icon w-5 h-5"></i> Bristol, UK
+                                </div>
+                                <div class="about-stat-sub text-xs mt-1">Based &amp; Available for Projects</div>
+                            </div>
+                        </div>
                     </div>
-                    <div>
-                        <h2 class="text-3xl font-bold mb-4">About Me</h2>
-                        <p class="text-xl leading-relaxed text-slate-300 desc-text serif italic">
-                            "I bridge electrochemistry, system engineering, and data science into one integrated skillset."
-                        </p>
-                    </div>
-                </div>
-                
-                <div class="prose prose-invert max-w-none text-slate-400 leading-7 space-y-6 desc-text">
-                    <p>
-                        Hello, I’m Yi Li — a Battery Simulation & Digital Analytics Engineer based in Bristol, UK.
-                    </p>
-                    <p>
-                        Unlike traditional battery or data engineers who specialise in only one slice of the system, my experience spans the entire battery chain: cell physics, cell-to-cell behaviour, and degradation mechanisms; module/pack design, integration, and production realities; and large-scale testing, data architecture, and machine-learning health estimation.
-                    </p>
-                    <p>
-                        Because I understand both the batteries and the data, I build digital models and SOH pipelines that genuinely reflect electrochemical reality, not just statistical patterns. Features a typical data engineer might ignore as “noise” are often the exact signatures I preserve to improve accuracy, interpretability, and physical grounding.
-                    </p>
-                    <p>
-                        My academic work in battery health estimation has been influential—my publications have been cited more than 2,700 times in research and industry. I hold a PhD in Electrical Engineering from Vrije Universiteit Brussel, and since then I’ve led high-volume testing labs, cross-partner R&D programmes, and advanced digital analytics projects across motorsport, aerospace, and energy storage.
-                    </p>
-                    <p>
-                        This integrated perspective allows me to design state-of-the-art digital twins, reliable lifetime prediction tools, and data-driven decision systems that unlock performance, safety, and operational efficiency.
-                    </p>
                 </div>
 
-                <div class="mt-12 pt-12 border-t border-slate-800 header-border">
-                    <h3 class="text-lg font-bold mb-6">Connect with me</h3>
-                    <div class="flex gap-4">
-                        <a href="https://linkedin.com" target="_blank" class="p-3 rounded-lg bg-slate-800 hover:bg-slate-700 transition-colors social-icon">
-                            <i data-lucide="linkedin" class="w-5 h-5"></i>
+                <div class="pt-6 border-t border-slate-200">
+                    <h3 class="text-lg font-bold mb-4 text-slate-800">Connect with me</h3>
+                    <div class="flex gap-3">
+                        <a href="https://linkedin.com" target="_blank" class="about-social social-icon p-3 rounded-lg bg-slate-100 hover:bg-slate-200 transition-colors border border-slate-200">
+                            <i data-lucide="linkedin" class="about-social-icon w-5 h-5"></i>
                         </a>
-                        <a href="https://scholar.google.com/citations?user=1V5rhnIAAAAJ&hl=zh-CN" target="_blank" rel="noopener" class="p-3 rounded-lg bg-slate-800 hover:bg-slate-700 transition-colors social-icon">
-                            <i data-lucide="book-open" class="w-5 h-5"></i>
+                        <a href="https://scholar.google.com/citations?user=1V5rhnIAAAAJ&hl=zh-CN" target="_blank" rel="noopener" class="about-social social-icon p-3 rounded-lg bg-slate-100 hover:bg-slate-200 transition-colors border border-slate-200">
+                            <i data-lucide="book-open" class="about-social-icon w-5 h-5"></i>
                         </a>
-                        <a href="mailto:yili_lifetime@outlook.com" class="p-3 rounded-lg bg-slate-800 hover:bg-slate-700 transition-colors social-icon">
-                            <i data-lucide="mail" class="w-5 h-5"></i>
+                        <a href="mailto:yili_lifetime@outlook.com" class="about-social social-icon p-3 rounded-lg bg-slate-100 hover:bg-slate-200 transition-colors border border-slate-200">
+                            <i data-lucide="mail" class="about-social-icon w-5 h-5"></i>
                         </a>
                     </div>
                 </div>
@@ -567,7 +580,7 @@
         lucide.createIcons();
 
         // 2. State Management
-        let isDark = true;
+        let isDark = false;
         let isMenuOpen = false;
         let currentPage = 'home';
 
@@ -646,6 +659,17 @@
             const timelineBorders = document.querySelectorAll('.timeline-border');
             const secondaryBtns = document.querySelectorAll('.secondary-btn');
             const footerBorder = document.querySelector('.footer-border');
+            const aboutCards = document.querySelectorAll('.about-card');
+            const aboutStats = document.querySelectorAll('.about-stat');
+            const aboutSocials = document.querySelectorAll('.about-social');
+            const aboutHeadings = document.querySelectorAll('.about-heading');
+            const aboutRoles = document.querySelectorAll('.about-role');
+            const aboutBodies = document.querySelectorAll('.about-body');
+            const aboutStatTitles = document.querySelectorAll('.about-stat-title');
+            const aboutStatTexts = document.querySelectorAll('.about-stat-text');
+            const aboutStatSubs = document.querySelectorAll('.about-stat-sub');
+            const aboutLocationIcons = document.querySelectorAll('.about-location-icon');
+            const aboutSocialIcons = document.querySelectorAll('.about-social-icon');
 
             if (isDark) {
                 // DARK MODE
@@ -686,6 +710,18 @@
                 
                 secondaryBtns.forEach(el => el.className = "secondary-btn px-6 py-3 rounded-lg border border-slate-700 hover:bg-slate-800 font-medium transition-colors");
 
+                aboutCards.forEach(el => el.className = "about-card bg-slate-900 text-slate-100 rounded-2xl shadow-md border border-slate-700");
+                aboutStats.forEach(el => el.className = "about-stat p-5 rounded-xl bg-slate-800 border border-slate-700 shadow-sm");
+                aboutSocials.forEach(el => el.className = "about-social social-icon p-3 rounded-lg bg-slate-800 hover:bg-slate-700 transition-colors border border-slate-700");
+                aboutHeadings.forEach(el => el.className = "about-heading text-3xl md:text-4xl font-extrabold mb-1 leading-tight text-white");
+                aboutRoles.forEach(el => el.className = "about-role font-semibold text-sm md:text-base leading-snug text-emerald-300");
+                aboutBodies.forEach(el => el.className = "about-body space-y-4 text-base leading-relaxed text-slate-200");
+                aboutStatTitles.forEach(el => el.className = "about-stat-title text-2xl font-extrabold mb-1 text-emerald-300");
+                aboutStatTexts.forEach(el => el.className = "about-stat-text text-sm font-semibold text-slate-100");
+                aboutStatSubs.forEach(el => el.className = "about-stat-sub text-xs mt-1 text-slate-400");
+                aboutLocationIcons.forEach(el => el.className = "about-location-icon w-5 h-5 text-emerald-300");
+                aboutSocialIcons.forEach(el => el.className = "about-social-icon w-5 h-5 text-slate-200");
+
             } else {
                 // LIGHT MODE
                 body.className = "bg-slate-50 text-slate-900 font-sans transition-colors duration-300 min-h-screen flex flex-col";
@@ -724,6 +760,18 @@
                 timelineDots.forEach(el => el.classList.replace('bg-slate-900', 'bg-white'));
                 
                 secondaryBtns.forEach(el => el.className = "secondary-btn px-6 py-3 rounded-lg border border-slate-300 hover:bg-slate-100 font-medium transition-colors");
+
+                aboutCards.forEach(el => el.className = "about-card bg-white text-slate-800 rounded-2xl shadow-md border border-slate-200");
+                aboutStats.forEach(el => el.className = "about-stat p-5 rounded-xl bg-slate-50 border border-slate-200 shadow-sm");
+                aboutSocials.forEach(el => el.className = "about-social social-icon p-3 rounded-lg bg-slate-100 hover:bg-slate-200 transition-colors border border-slate-200");
+                aboutHeadings.forEach(el => el.className = "about-heading text-3xl md:text-4xl font-extrabold mb-1 leading-tight text-slate-900");
+                aboutRoles.forEach(el => el.className = "about-role font-semibold text-sm md:text-base leading-snug text-blue-700");
+                aboutBodies.forEach(el => el.className = "about-body space-y-4 text-base leading-relaxed text-slate-700");
+                aboutStatTitles.forEach(el => el.className = "about-stat-title text-2xl font-extrabold mb-1 text-blue-700");
+                aboutStatTexts.forEach(el => el.className = "about-stat-text text-sm font-semibold text-slate-800");
+                aboutStatSubs.forEach(el => el.className = "about-stat-sub text-xs mt-1 text-slate-500");
+                aboutLocationIcons.forEach(el => el.className = "about-location-icon w-5 h-5 text-blue-700");
+                aboutSocialIcons.forEach(el => el.className = "about-social-icon w-5 h-5 text-slate-700");
             }
 
             // Ensure current tab highlight respects theme
