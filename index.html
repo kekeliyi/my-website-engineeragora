@@ -93,8 +93,8 @@
                         </h1>
                         <p class="text-lg md:text-xl max-w-2xl text-slate-400 mx-auto md:mx-0 desc-text">
                              True battery intelligence requires understanding the full lifecycle. I combine deep expertise in <strong>
-                                cell selection and pack design</strong> with advanced <strong>Machine Learning</strong>. 
-                                I don't just "play with" data; I preserve the physics that others throw away.
+                                cell selection, pack design, production and application </strong> with advanced <strong>Machine Learning</strong>. 
+                                I don't just "play with" data; I understand the whole pictures behind the data.
                         </p>
                         <div class="flex flex-col sm:flex-row gap-4 pt-4 justify-center md:justify-start">
                             <button onclick="switchPage('portfolio')" class="px-6 py-3 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white font-medium transition-colors flex items-center justify-center gap-2">
@@ -162,6 +162,39 @@
                                 <li class="flex gap-2"><span class="text-emerald-500">•</span> <strong class="text-white">Full Context:</strong> Integration of cell chemistry data into pack-level ML models.</li>
                                 <li class="flex gap-2"><span class="text-emerald-500">•</span> <strong class="text-white">Feature Engineering:</strong> Extracting specific electrochemical indicators before training.</li>
                             </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Engineering-Data Gap Section -->
+            <section class="pb-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+                <div class="bg-slate-800/60 border border-slate-700 rounded-2xl p-8 md:p-10 shadow-lg">
+                    <div class="mb-8 text-center md:text-left">
+                        <h2 class="text-3xl font-bold mb-2">The Engineering-Data Gap</h2>
+                        <p class="text-slate-400 desc-text">Why pure Data Science often fails in Battery Engineering.</p>
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <!-- Blind Data Approach -->
+                        <div class="p-6 rounded-2xl border border-rose-500/40 bg-rose-500/5">
+                            <div class="w-10 h-10 rounded-full flex items-center justify-center bg-white text-rose-600 mb-4 shadow">
+                                <i data-lucide="filter-x" class="w-5 h-5"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-3 text-rose-400">The "Blind" Data Approach</h3>
+                            <p class="text-slate-300 text-sm leading-relaxed">
+                                Standard data scientists treat physical anomalies as statistical noise. They "clean" the data to fit a curve, inadvertently stripping away the subtle signals of lithium plating or thermal degradation because they lack the physical context.
+                            </p>
+                        </div>
+
+                        <!-- Physics-Informed Approach -->
+                        <div class="p-6 rounded-2xl border border-emerald-500/40 bg-emerald-500/5">
+                            <div class="w-10 h-10 rounded-full flex items-center justify-center bg-white text-emerald-600 mb-4 shadow">
+                                <i data-lucide="check-circle-2" class="w-5 h-5"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-3 text-emerald-400">My Physics-Informed Approach</h3>
+                            <p class="text-slate-300 text-sm leading-relaxed">
+                                I know the physics of the cell from development to race day. I preserve "outliers" that represent real physical limits. I use AI not just to fit curves, but to uncover the complex, non-linear relationships between <strong>manufacturing inputs</strong> and <strong>track performance</strong>.
+                            </p>
                         </div>
                     </div>
                 </div>
