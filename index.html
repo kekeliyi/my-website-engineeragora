@@ -557,31 +557,56 @@
         <div id="page-about" class="page-section hidden fade-in">
             <div class="max-w-6xl mx-auto px-4 py-20 space-y-10">
                 <div class="about-card bg-white text-slate-800 rounded-2xl shadow-md border border-slate-200">
-                    <div class="grid md:grid-cols-3 gap-8 p-8 md:p-10">
-                        <div class="md:col-span-2 space-y-6">
-                            <div class="flex items-center gap-4">
-                                <div class="about-photo w-16 h-16 rounded-full overflow-hidden border-2 border-slate-200 shadow-sm">
-                                    <img src="myfiles/yili_photo.jpeg" alt="Yi Li" class="w-full h-full object-cover">
-                                </div>
-                                <div>
-                                    <h2 class="about-heading text-3xl md:text-4xl font-extrabold mb-1 leading-tight">Hello, I’m Yi Li</h2>
-                                    <div class="about-role font-semibold text-sm md:text-base leading-snug">Battery Simulation &amp; Digital Analytics Engineer</div>
-                                </div>
+                    <div class="space-y-8 p-8 md:p-10">
+                        <div>
+                            <h2 class="about-heading text-3xl md:text-4xl font-extrabold mb-1 leading-tight">Hello, I’m Yi Li</h2>
+                            <div class="about-role font-semibold text-sm md:text-base leading-snug">Battery Simulation &amp; Digital Analytics Engineer</div>
+                        </div>
+
+                        <div class="flex flex-col md:flex-row gap-6 items-start">
+                            <div class="about-photo w-40 h-40 rounded-xl overflow-hidden border-2 border-slate-200 shadow-md flex-shrink-0">
+                                <img src="myfiles/yili_photo.jpeg" alt="Yi Li" class="w-full h-full object-cover">
                             </div>
                             <div class="about-body space-y-4 text-base leading-relaxed">
+                                <p><strong>The Philosophy</strong></p>
                                 <p>
-                                    Unlike traditional battery or data engineers who specialise in only one slice of the system, my experience spans the entire battery chain: <strong>cell physics</strong>, <strong>cell-to-cell behaviour</strong>, and <strong>degradation mechanisms</strong>; module/pack design, integration, and production realities; and large-scale testing, data architecture, and machine-learning health estimation.
+                                    I see myself as a navigator in the chaotic world of battery data. 
+                                    My passion lies in <strong>breaking data silos </strong> across battery pack design, manufacturing, 
+                                    and on-field application. I <strong>create order out of chaos, making sense of messy real-world data and uncovering 
+                                    the physics-based truth hidden inside </strong>.        </p>
+                                <p><strong>The Mission: Today</strong></p>
+                                <p>
+                                    Today, I put that philosophy to work as a System Performance Engineer at Fortescue Zero. Working on high-performance projects like Formula E and LMDh, my primary goal is to break down the information silos that typically separate manufacturing stages.
                                 </p>
                                 <p>
-                                    Because I understand both the batteries and the data, I build digital models and SOH pipelines that genuinely reflect electrochemical reality, not just statistical patterns. Features a typical data engineer might ignore as “noise” are often the exact signatures I preserve to improve accuracy, interpretability, and physical grounding.
+                                    By connecting data all the way from cell production to pack assembly and finally to track racing, I enable rapid root cause analysis. This allows us to instantly identify whether an issue stems from initial cell quality or a manufacturing process—massively increasing both production speed and overall quality. I thrive on swimming through this chaotic ocean of data to make sense of it, constructing automation processes that drive efficiency and precision.
+                                </p>
+                                <p><strong>How I Got Here</strong></p>
+                                <p>
+                                    So, how did I reach this point? My journey actually traces back to my time in academia.
                                 </p>
                                 <p>
-                                    This integrated perspective allows me to design state-of-the-art digital twins, reliable lifetime prediction tools, and data-driven decision systems that unlock performance, safety, and operational efficiency.
+                                    My PhD focused on State of Health (SOH) estimation—work that has since supported other researchers with over 2,700 citations. While I loved the theory, I knew I wanted to apply that rigor directly to the automotive industry.
+                                </p>
+                                <p>
+                                    My first major role in the industry was with McLaren Automotive. 
+                                    As a Cell Project Engineer on the Speedtail, I faced the challenge of treating the battery as a "black box."
+                                     This constraint forced me to innovate; I developed lifetime prediction models for cell warranty purpose,
+                                      despite limited visibility into the cell chemistry. The core part is you need to understand how your customers will use the pack 
+                                     and design tests arount it. 
+                                </p>
+                                <p>
+                                    Later, I realized I wanted to dive even deeper into the virtual side of things, so I moved to Vertical Aerospace.
+                                     This was a pivotal period where I developed their first automated data pipeline and immersed myself in cell-to-system modeling. 
+                                     My focus was on predicting the lifetime—and residual value—of eVTOL packs long before they took flight.
+                                </p>
+                                <p>
+                                    This unique path—from deep theory to hypercars to aerospace to motorsport—is what enables me to effectively bridge the gap between physical chemistry and data science.
                                 </p>
                             </div>
                         </div>
 
-                        <div class="md:col-span-1 space-y-4">
+                        <div class="grid sm:grid-cols-3 gap-4">
                             <div class="about-stat p-5 rounded-xl bg-slate-50 border border-slate-200 shadow-sm">
                                 <div class="about-stat-title text-2xl font-extrabold mb-1">PhD</div>
                                 <div class="about-stat-text text-sm font-semibold">Electrical Engineering</div>
@@ -778,7 +803,7 @@
                 aboutSocialIcons.forEach(el => el.className = "about-social-icon w-5 h-5 text-slate-200");
                 themePanels.forEach(el => el.className = "theme-panel rounded-2xl p-8 md:p-10 bg-slate-800/60 border border-slate-700 shadow-lg");
                 themeCards.forEach(el => el.className = "theme-card p-6 rounded-2xl shadow-lg bg-slate-800/60 border border-slate-700");
-                aboutPhotos.forEach(el => el.className = "about-photo w-16 h-16 rounded-full overflow-hidden border-2 border-slate-600 shadow-sm");
+                aboutPhotos.forEach(el => el.className = "about-photo w-40 h-40 rounded-xl overflow-hidden border-2 border-slate-600 shadow-md flex-shrink-0");
 
             } else {
                 // LIGHT MODE
@@ -832,7 +857,7 @@
                 aboutSocialIcons.forEach(el => el.className = "about-social-icon w-5 h-5 text-slate-700");
                 themePanels.forEach(el => el.className = "theme-panel rounded-2xl p-8 md:p-10 bg-white text-slate-800 shadow-md border border-slate-200");
                 themeCards.forEach(el => el.className = "theme-card p-6 rounded-2xl shadow-md bg-white border border-slate-200");
-                aboutPhotos.forEach(el => el.className = "about-photo w-16 h-16 rounded-full overflow-hidden border-2 border-slate-200 shadow-sm");
+                aboutPhotos.forEach(el => el.className = "about-photo w-40 h-40 rounded-xl overflow-hidden border-2 border-slate-200 shadow-md flex-shrink-0");
             }
 
             // Ensure current tab highlight respects theme
