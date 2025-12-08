@@ -39,9 +39,10 @@
                 
                 <!-- Desktop Tabs -->
                 <div class="hidden md:flex items-center gap-1">
-                    <button onclick="switchPage('insights')" class="nav-item px-4 py-2 rounded-md text-sm font-medium transition-colors hover:bg-slate-100 text-slate-500">Prof. Insights</button>
                     <button onclick="switchPage('about')" class="nav-item px-4 py-2 rounded-md text-sm font-medium transition-colors hover:bg-slate-100 text-slate-500">About Me</button>
+                    <button onclick="switchPage('insights')" class="nav-item px-4 py-2 rounded-md text-sm font-medium transition-colors hover:bg-slate-100 text-slate-500">Prof. Insights</button>
                     <button onclick="switchPage('portfolio')" class="nav-item px-4 py-2 rounded-md text-sm font-medium transition-colors hover:bg-slate-100 text-slate-500">CV & Portfolio</button>
+                    <button onclick="switchPage('projects')" class="nav-item px-4 py-2 rounded-md text-sm font-medium transition-colors hover:bg-slate-100 text-slate-500">Projects</button>
                     <button onclick="switchPage('personal')" class="nav-item px-4 py-2 rounded-md text-sm font-medium transition-colors hover:bg-slate-100 text-slate-500">Personal Blog</button>
                     
                     <div class="w-px h-6 bg-slate-700 mx-2"></div>
@@ -67,9 +68,10 @@
         <!-- Mobile Dropdown -->
         <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 bg-white">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <button onclick="switchPage('insights')" class="block w-full text-left px-3 py-2 rounded-md text-base font-medium hover:bg-slate-100 text-slate-500">Professional Insights</button>
                 <button onclick="switchPage('about')" class="block w-full text-left px-3 py-2 rounded-md text-base font-medium hover:bg-slate-100 text-slate-500">About Me</button>
+                <button onclick="switchPage('insights')" class="block w-full text-left px-3 py-2 rounded-md text-base font-medium hover:bg-slate-100 text-slate-500">Professional Insights</button>
                 <button onclick="switchPage('portfolio')" class="block w-full text-left px-3 py-2 rounded-md text-base font-medium hover:bg-slate-100 text-slate-500">CV & Portfolio</button>
+                <button onclick="switchPage('projects')" class="block w-full text-left px-3 py-2 rounded-md text-base font-medium hover:bg-slate-100 text-slate-500">Projects</button>
                 <button onclick="switchPage('personal')" class="block w-full text-left px-3 py-2 rounded-md text-base font-medium hover:bg-slate-100 text-slate-500">Personal Blog</button>
             </div>
         </div>
@@ -503,6 +505,54 @@
             </div>
         </div>
 
+        <!-- 4b. PROJECTS PAGE -->
+        <div id="page-projects" class="page-section hidden fade-in">
+            <div class="max-w-5xl mx-auto px-4 py-20 space-y-10">
+                <div class="mb-8 text-center md:text-left">
+                    <h2 class="text-3xl font-bold mb-2">Projects</h2>
+                    <p class="text-slate-600 desc-text">AI/ML side projects and prototypes from my GitHub.</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="p-6 rounded-2xl bg-slate-800/60 border border-slate-700 project-card">
+                        <div class="flex items-center justify-between mb-3">
+                            <h3 class="text-xl font-semibold">Project 1</h3>
+                            <span class="text-xs font-medium px-2 py-1 rounded bg-slate-900 text-amber-400">Coming soon</span>
+                        </div>
+                        <p class="text-sm text-slate-300 mb-4">Details coming soon. I’ll add a walkthrough and repo link here.</p>
+                        <div class="flex flex-wrap gap-2 text-xs font-mono">
+                            <span class="px-2 py-1 rounded bg-slate-900 text-emerald-400">Python</span>
+                            <span class="px-2 py-1 rounded bg-slate-900 text-emerald-400">PyTorch</span>
+                            <span class="px-2 py-1 rounded bg-slate-900 text-emerald-400">ML</span>
+                        </div>
+                    </div>
+                    <div class="p-6 rounded-2xl bg-slate-800/60 border border-slate-700 project-card">
+                        <div class="flex items-center justify-between mb-3">
+                            <h3 class="text-xl font-semibold">Project 2</h3>
+                            <span class="text-xs font-medium px-2 py-1 rounded bg-slate-900 text-amber-400">Coming soon</span>
+                        </div>
+                        <p class="text-sm text-slate-300 mb-4">Details coming soon. I’ll add a walkthrough and repo link here.</p>
+                        <div class="flex flex-wrap gap-2 text-xs font-mono">
+                            <span class="px-2 py-1 rounded bg-slate-900 text-emerald-400">Python</span>
+                            <span class="px-2 py-1 rounded bg-slate-900 text-emerald-400">Autoencoder</span>
+                            <span class="px-2 py-1 rounded bg-slate-900 text-emerald-400">Signal</span>
+                        </div>
+                    </div>
+                    <div class="p-6 rounded-2xl bg-slate-800/60 border border-slate-700 project-card">
+                        <div class="flex items-center justify-between mb-3">
+                            <h3 class="text-xl font-semibold">Project 3</h3>
+                            <span class="text-xs font-medium px-2 py-1 rounded bg-slate-900 text-amber-400">Coming soon</span>
+                        </div>
+                        <p class="text-sm text-slate-300 mb-4">Details coming soon. I’ll add a walkthrough and repo link here.</p>
+                        <div class="flex flex-wrap gap-2 text-xs font-mono">
+                            <span class="px-2 py-1 rounded bg-slate-900 text-emerald-400">Python</span>
+                            <span class="px-2 py-1 rounded bg-slate-900 text-emerald-400">Airflow</span>
+                            <span class="px-2 py-1 rounded bg-slate-900 text-emerald-400">ETL</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- 5. ABOUT PAGE -->
         <div id="page-about" class="page-section hidden fade-in">
             <div class="max-w-6xl mx-auto px-4 py-20 space-y-10">
@@ -510,7 +560,9 @@
                     <div class="grid md:grid-cols-3 gap-8 p-8 md:p-10">
                         <div class="md:col-span-2 space-y-6">
                             <div class="flex items-center gap-4">
-                                <div class="w-14 h-14 rounded-full bg-green-600 text-white font-bold text-2xl flex items-center justify-center shadow-sm">YL</div>
+                                <div class="about-photo w-16 h-16 rounded-full overflow-hidden border-2 border-slate-200 shadow-sm">
+                                    <img src="myfiles/yili_photo.jpeg" alt="Yi Li" class="w-full h-full object-cover">
+                                </div>
                                 <div>
                                     <h2 class="about-heading text-3xl md:text-4xl font-extrabold mb-1 leading-tight">Hello, I’m Yi Li</h2>
                                     <div class="about-role font-semibold text-sm md:text-base leading-snug">Battery Simulation &amp; Digital Analytics Engineer</div>
@@ -582,7 +634,7 @@
         // 2. State Management
         let isDark = false;
         let isMenuOpen = false;
-        let currentPage = 'home';
+        let currentPage = 'about';
 
         // Elements
         const body = document.getElementById('app');
@@ -672,6 +724,7 @@
             const aboutSocialIcons = document.querySelectorAll('.about-social-icon');
             const themePanels = document.querySelectorAll('.theme-panel');
             const themeCards = document.querySelectorAll('.theme-card');
+            const aboutPhotos = document.querySelectorAll('.about-photo');
 
             if (isDark) {
                 // DARK MODE
@@ -725,6 +778,7 @@
                 aboutSocialIcons.forEach(el => el.className = "about-social-icon w-5 h-5 text-slate-200");
                 themePanels.forEach(el => el.className = "theme-panel rounded-2xl p-8 md:p-10 bg-slate-800/60 border border-slate-700 shadow-lg");
                 themeCards.forEach(el => el.className = "theme-card p-6 rounded-2xl shadow-lg bg-slate-800/60 border border-slate-700");
+                aboutPhotos.forEach(el => el.className = "about-photo w-16 h-16 rounded-full overflow-hidden border-2 border-slate-600 shadow-sm");
 
             } else {
                 // LIGHT MODE
@@ -778,6 +832,7 @@
                 aboutSocialIcons.forEach(el => el.className = "about-social-icon w-5 h-5 text-slate-700");
                 themePanels.forEach(el => el.className = "theme-panel rounded-2xl p-8 md:p-10 bg-white text-slate-800 shadow-md border border-slate-200");
                 themeCards.forEach(el => el.className = "theme-card p-6 rounded-2xl shadow-md bg-white border border-slate-200");
+                aboutPhotos.forEach(el => el.className = "about-photo w-16 h-16 rounded-full overflow-hidden border-2 border-slate-200 shadow-sm");
             }
 
             // Ensure current tab highlight respects theme
